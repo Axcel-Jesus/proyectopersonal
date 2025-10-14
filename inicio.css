@@ -1,4 +1,4 @@
-article {
+.presentacion {
     background: #000000;
     border-radius: 16px;
     box-shadow: 0 4px 16px rgba(0,0,0,0.08);
@@ -31,7 +31,6 @@ article img {
     margin-left: auto;
     border-radius: 10px;
     width: 100%;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
     grid-column-start: 3;
     grid-column-end: 3;
     grid-row-start: 1;
@@ -49,4 +48,31 @@ article img {
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 2;
+}
+
+.catalogo {
+    background: #2c2c2c;
+    border-radius: 8px;
+    padding:32px;
+    margin:40px auto;
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    width: 90%;
+}
+.carrusel {
+    display: flex;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    padding: 5px;
+    margin: 5px;
+    align-items: center;
+    
+}
+.productos {
+    background: #000000;
+    border-radius: 8px;
+    width: 80%;
+    height: 80%;
+    padding: 10px;
+    margin: 15px;
 }
