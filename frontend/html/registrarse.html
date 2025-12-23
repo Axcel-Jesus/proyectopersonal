@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrarse</title>
-    <link rel="icon" href="logo.png" type="image/png">
-    <link rel="stylesheet" href="iniciarsecion.css">
-    <link rel="stylesheet" href="nav.css">
+    <link rel="icon" href="../assets/logo.png" type="image/png">
+    <link rel="stylesheet" href="../css/iniciarsecion.css">
+    <link rel="stylesheet" href="../css/nav.css">
 </head>
 <body>
     <nav>
-        <img src="logo.png" alt="logo" height="50px" class="logo">
+        <img src="../assets/logo.png" alt="logo" height="50px" class="logo">
         <h1 class="title">IDweb</h1>
         <ul>
             <li><a href="inicio.html">Inicio</a></li>
@@ -38,9 +38,10 @@
             <label for="edad">Edad</label>
             <input type="number" id="edad" name="edad" min="1" required>
             
-            <button type="submit" class="btn-login">Registrarse</button>
+            <button type="submit" class="btn-login" id="btn-login">Registrarse</button> 
             <button type="button" class="btn-register" onclick="window.location.href='iniciarsecion.html'">Iniciar sesión con cuenta existente</button>
         </form>
     </main>
+    <script src="procesosecion.js"></script>
 </body>
 </html>
