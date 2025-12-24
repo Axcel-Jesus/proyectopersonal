@@ -1,0 +1,21 @@
+CREATE DATABASE IF NOT EXISTS tienda;
+USE tienda;
+CREATE TABLE clientes(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre VARCHAR(50) NOT NULL,
+    correo VARCHAR(50) NOT NULL,
+    contrasena VARCHAR(50) NOT NULL,
+    pais VARCHAR(50) NOT NULL,
+    edad INTEGER NOT NULL,
+    foto BLOB NOT NULL,
+    fecha DATE NOT NULL,
+    status INTEGER NOT NULL
+);
+CREATE TABLE productos(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre VARCHAR(50) NOT NULL,
+    descripcion VARCHAR(100) NOT NULL,
+    precio INTEGER NOT NULL,
+    foto BLOB NOT NULL,
+    fecha DATE NOT NULL,
+);

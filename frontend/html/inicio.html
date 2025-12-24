@@ -23,43 +23,51 @@
     <main>
         <form>
             <article class="presentacion">
-                <h2 class="titulo contenedor1">Encuentra lo que necesitas sobre tecnología en un solo lugar</h2>
+                <h2 class="titulo contenedor1">¡HOLA {{nombre}}! Encuentra lo que necesitas sobre tecnología en un solo lugar</h2>
                 <img src="../assets/empresa-tic.jpg" alt="empresa-tic" class="contenedor2">
                 <p class="parrafo contenedor3">En AxsusTec te ofrecemos productos y servicios de tecnología para que puedas encontrar lo que necesitas en un solo lugar.
                     Con nuestra plataforma de comercio electrónico, podrás encontrar productos y servicios de tecnología de manera rápida y fácil.
                 </p>
             </article>
             <article class ="catalogo">
-            <h2>Registrarse</h2>
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" required>
-            
                 <header><h2>Revisa algunas de nuestras categorias</h2></header>
                 <article  class="carrusel">
+                    <a href="procesadores.html" class="productos-link">
                     <article class="productos">
-                        <header class="producto">Procesadores</header><br>
+                        <header class="producto">Procesadores</header>
                         <img src="../assets/procesadores.jpg" alt="procesadores" class="img-producto">
                     </article>
+                    </a>
+                    <a href="placas-madre.html" class="productos-link">
                     <article class="productos">
-                        <header class="producto">Placas madre</header><br>
+                        <header class="producto">Placas madre</header>
                         <img src="../assets/placamadre.jpg" alt="placasmadre" class="img-producto">
                     </article>
+                    </a>
+                    <a href="tarjetas-graficas.html" class="productos-link">
                     <article class="productos">
-                        <header class="producto">tarjetas graficas</header><br>
+                        <header class="producto">tarjetas graficas</header>
                         <img src="../assets/tarjetagrafica.jpg" alt="tarjetas" class="img-producto">
                     </article>
+                    </a>
+                    <a href="monitores.html" class="productos-link">
                     <article class="productos">
-                        <header class="producto">Monitores</header><br>
+                        <header class="producto">Monitores</header>
                         <img src="../assets/monitor.jpg" alt="monitor" class="img-producto">
                     </article>
+                    </a>
+                    <a href="teclados.html" class="productos-link">
                     <article class="productos">
-                        <header class="producto">Teclados</header><br>
+                        <header class="producto">Teclados</header>
                         <img src="../assets/teclado.jpg" alt="teclados" class="img-producto">
                     </article>
+                    </a>
+                    <a href="mouses.html" class="productos-link">
                     <article class="productos">
-                        <header class="producto">Mouses</header><br>
+                        <header class="producto">Mouses</header>
                         <img src="../assets/mouse.jpg" alt="mouses" class="img-producto">
                     </article>
+                    </a>
                 </article>
             </article>
         </form>
@@ -85,5 +93,15 @@
             &copy; 2025 AxsusTec. Todos los derechos reservados.
         </div>
     </footer>
+    <script>
+        (function(){
+            try {
+                const greetEl = document.querySelector('.titulo.contenedor1');
+                if (!greetEl) return;
+                const stored = (localStorage.getItem('usuario_nombre') || 'visitante');
+                greetEl.innerHTML = greetEl.innerHTML.replace('{{nombre}}', stored);
+            } catch (e) { /* ignore */ }
+        })();
+    </script>
 </body>
 </html>

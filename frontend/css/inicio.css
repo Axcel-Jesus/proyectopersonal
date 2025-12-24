@@ -61,18 +61,35 @@ article img {
 }
 .carrusel {
     display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
     border-radius: 16px;
     box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    padding: 5px;
+    padding: 12px;
     margin: 5px;
-    align-items: center;
-    
+    align-items: stretch;
+    width: 100%;
 }
 .productos {
     background: #000000;
     border-radius: 8px;
-    width: 80%;
-    height: 80%;
     padding: 10px;
-    margin: 15px;
+    margin: 0; /* spacing is controlled by grid gap */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 260px; /* ensure uniform card height */
+    box-sizing: border-box;
+}
+.productos .producto {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 8px;
+}
+.productos .img-producto {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
 }
